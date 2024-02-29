@@ -1,7 +1,7 @@
 const { mock, handler } = require('pactum');
 const { like } = require('pactum-matchers');
 
-async function startServer(port, host) {
+async function startServer(port: number, host: string) {
 
 
 mock.addInteraction({
@@ -358,7 +358,7 @@ mock.addInteraction({
 mock.start(port, host);
 }
 
-async function stopServer(){
+async function stopServer(): Promise<void>{
     await mock.stop();
 }
 

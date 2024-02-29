@@ -1,9 +1,9 @@
-const { spec, handler, mock, settings, like } = require("pactum");
+const { spec,request } = require("pactum");
 const {startServer, stopServer} = require("./utils/mock-standalone");
 
 describe("test suite", () => {
-  beforeEach(async () => {
-    settings.setLogLevel("ERROR");
+  before(async () => {
+    request.defaultTimeout(5000);
     await startServer(3001, "127.0.0.1");
   });
 
@@ -37,7 +37,7 @@ describe("test suite", () => {
       .expectStatus(200);
   });
 
-  afterEach(async () => {
+  after(async () => {
     await stopServer();
   });
 });
