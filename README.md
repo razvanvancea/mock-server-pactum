@@ -17,3 +17,10 @@ npm install
 npm run test
 ```
 <br />
+
+## Running mock server as standalone process (standalone-server.ts file)
+```sh
+npm install
+npm run start-server
+```
+Now you can simply send API requests from Postman like GET 'http://127.0.0.1:3001/api/users'

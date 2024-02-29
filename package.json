@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx ts-mocha tests/*.ts --timeout=5000"
+    "test": "npx ts-mocha tests/*.ts --timeout=5000",
+    "start-server": "npx nodemon standalone-server.ts"
   },
   "keywords": [],
   "author": "",
